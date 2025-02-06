@@ -6,10 +6,12 @@ body {
   padding-top: 10px;
   padding-bottom: 30px;
   #border: 1px solid #DADBDC;
+  /*
   background-size: 32pt 32pt;
   background-image:
     linear-gradient(to right, #F2F2F2 1pt, transparent 1pt),
     linear-gradient(to bottom, #F2F2F2 1pt, transparent 1pt);
+  */
 }
 
 h1 {
