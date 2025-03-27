@@ -1,0 +1,86 @@
+WPTE 2025 (affiliated to FSCD 2025 in Birmingham, UK)
+
+11th International Workshop on Rewriting Techniques for Program
+Transformations and Evaluation (July 20th, 2025)
+
+Web:         https://wpte2025.github.io/
+Submit:      https://easychair.org/conferences/?conf=wpte2025
+Deadline:    9th May 2025
+
+---------------------------------------------------------------------------
+The aim of WPTE is to bring together researchers working on
+program transformations, evaluation, and operationally based
+programming language semantics, using rewriting methods, in order to
+share the techniques and recent developments and to exchange ideas to
+encourage further activation of research in this area.
+
+Topics of Interest
+---------------------------------------------------------------------------
+* Correctness of program transformations, optimizations and translations.
+* Program transformations for proving termination, confluence, and
+  other properties.
+* Correctness of evaluation strategies.
+* Operational semantics of programs, operationally-based program
+  equivalences such as contextual equivalences and bisimulations.
+* Cost-models for arguing about the optimizing power of transformations
+  and the costs of evaluation.
+* Program transformations for verification and theorem proving purposes.
+* Translation, simulation, equivalence of programs with different
+  formalisms, and evaluation strategies.
+* Program transformations for applying rewriting techniques to programs
+  in specific programming languages.
+* Program transformations for program inversions and program synthesis.
+* Program transformation and evaluation for Haskell and rewriting.
+* Rewriting-based transformations for bidirectional programming and
+  reversible computation.
+
+Submission Guidelines
+---------------------------------------------------------------------------
+For the paper submission deadline an extended abstract of at most 10
+pages is required. The extended abstract may present original work,
+but also work in progress. The program committee will select the
+presentations for the workshop based on the submissions. All selected
+contributions will be included in the informal proceedings distributed
+to the workshop participants. One author of each accepted extended
+abstract is expected to present it at the workshop in person.
+
+Submissions must be prepared in LaTeX using the EPTCS macro package.
+
+All submissions are to be made via:
+
+  https://easychair.org/conferences/?conf=wpte2025
+
+Post-Proceedings or Journal Special Issue
+---------------------------------------------------------------------------
+For the 2020-2023 editions, papers from WPTE were selected for
+post-submission and eventual publication in JLAMP special issues.
+We will discuss, also based on interest expressed by authors at the
+workshop, whether to arrange a special issue or other formal proceedings
+for this year's edition.
+
+Important Dates
+---------------------------------------------------------------------------
+Submission of extended abstracts: 9th May 2025 (AoE)
+Notification of acceptance: 13th June 2025
+Final version for informal proceedings: 30th June 2025
+Workshop: 20th July 2025
+Submission to post-proceedings/special issue: autumn 2025 (tbd)
+
+Program Committee
+---------------------------------------------------------------------------
+Martin Avanzini, Inria Sophia Antipolis
+Patrick Bahr, IT University of Copenhagen
+Demis Ballis, University of Udine
+Mirai Ikebuchi, Kyoto University
+Cynthia Kop, Radboud University Nijmegen (co-chair)
+Ivan Lanese, University of Bologna
+Pierre Lermusiaux, Inria Rennes
+Steven Libby, University of Portland
+Luca Roversi, University of Turin
+Janis Voigtlaender, University of Duisburg-Essen (co-chair)
+Johannes Waldmann, Leipzig University of Applied Sciences
+Sarah Winkler, Free University of Bozen-Bolzano
+
+Contact
+---------------------------------------------------------------------------
+Please direct questions to: wpte2025@easychair.org
