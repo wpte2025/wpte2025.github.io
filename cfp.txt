@@ -3,8 +3,8 @@ WPTE 2025 (affiliated to FSCD 2025 in Birmingham, UK)
 11th International Workshop on Rewriting Techniques for Program
 Transformations and Evaluation (July 20th, 2025)
 
-Web:         https://wpte2025.github.io/
-Submit:      https://easychair.org/conferences/?conf=wpte2025
+Webpage:     https://wpte2025.github.io/
+Submission:  https://easychair.org/conferences/?conf=wpte2025
 Deadline:    9th May 2025
 
 ---------------------------------------------------------------------------
@@ -84,3 +84,5 @@ Sarah Winkler, Free University of Bozen-Bolzano
 Contact
 ---------------------------------------------------------------------------
 Please direct questions to: wpte2025@easychair.org
+
+CFP also at: https://easychair.org/cfp/wpte2025
