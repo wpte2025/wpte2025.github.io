@@ -5,7 +5,7 @@ Transformations and Evaluation (July 20th, 2025)
 
 Webpage:     https://wpte2025.github.io/
 Submission:  https://easychair.org/conferences/?conf=wpte2025
-Deadline:    14th May 2025
+Deadline:    14th May 2025 (extended)
 
 ---------------------------------------------------------------------------
 The aim of WPTE is to bring together researchers working on
@@ -60,7 +60,7 @@ for this year's edition.
 
 Important Dates
 ---------------------------------------------------------------------------
-Submission of extended abstracts: 14th May 2025 (AoE)
+Submission of extended abstracts: 14th May 2025 (AoE), extended
 Notification of acceptance: 11th June 2025
 Early Registration for the conference: 13th June 2025
 Final version for informal proceedings: 30th June 2025
