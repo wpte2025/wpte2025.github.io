@@ -1,0 +1,136 @@
+% need to use LuaLaTeX
+
+% pre-proceedings with TOC including authors, odd-page starts, numbered blanks, parameterized names and authors
+
+% -----------------------------------------------------------------------------
+% Uses newpax (v0.55+) to extract and reinsert all PDF annotations,
+% preserving internal hyperlinks and bookmarks from each sub-PDF.
+% -----------------------------------------------------------------------------
+
+\RequirePackage{pdfmanagement-testphase}
+\DocumentMetadata{uncompress}
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{newpax}
+\usepackage{pgffor}
+
+% --- Extract annotations into .newpax files --------------------------
+\directlua{
+  require("newpax")
+  newpax.writenewpax("Refactoring Communication Protocols for Crash Safety")
+  newpax.writenewpax("Proving Termination of Scala Programs by Constrained Term Rewriting")
+  newpax.writenewpax("A Cyclic Proof System for Partial Correctness of Separation Logic with Recursive Procedure Calls")
+  newpax.writenewpax("On Transforming Prioritized Multithreaded Programs into Logically Constrained Term Rewrite Systems")
+  newpax.writenewpax("Probabilistic Lazy PCF with Real-Valued Choice")
+  newpax.writenewpax("Towards a verified compiler for Distributed PlusCal")
+  newpax.writenewpax("On Merging Constrained Rewrite Rules of Induction Hypotheses in Constrained Rewriting Induction")
+  newpax.writenewpax("Bounded Rewriting Induction for LCSTRSs")
+}
+
+% Plain page style for content pages
+\pagestyle{plain}
+
+% Ensure each paper starts on an odd page, with blank pages numbered
+\newcommand{\startPaper}{%
+  \clearpage%
+  \ifodd\value{page}\else%
+  \thispagestyle{plain}\null\clearpage%
+  \fi%
+}
+
+% Paper entries: title and author (comma-separated)
+\def\PaperList{%
+  Refactoring Communication Protocols for Crash Safety/{Leonid Nosovitskiy and Adam D.\ Barwell},%
+  Proving Termination of Scala Programs by Constrained Term Rewriting/{Dragana Milovancevic, Carsten Fuhs and Viktor Kuncak},%
+  A Cyclic Proof System for Partial Correctness of Separation Logic with Recursive Procedure Calls/{Takumi Sato and Koji Nakazawa},%
+  On Transforming Prioritized Multithreaded Programs into Logically Constrained Term Rewrite Systems/{Misaki Kojima and Naoki Nishida},%
+  Probabilistic Lazy PCF with Real-Valued Choice/{David Sabel and Manfred Schmidt-Schauss},%
+  Towards a verified compiler for Distributed PlusCal/{Ghilain Bergeron, Horatiu Cirstea and Stephan Merz},%
+  On Merging Constrained Rewrite Rules of Induction Hypotheses in Constrained Rewriting Induction/{Naoki Nishida and Nozomi Taira},%
+  Bounded Rewriting Induction for LCSTRSs/{Kasper Hagens and Cynthia Kop}%
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+{\LARGE \textbf{Informal Proceedings of the 11th International Workshop on Rewriting Techniques for Program Transformations and Evaluation (WPTE~2025)}\par}
+\vspace{1cm}
+{\Large Birmingham, UK, July 20, 2025\par}
+
+\vfill
+
+\section*{Preface}
+
+The 11th International Workshop on Rewriting Techniques for Program Transformations and Evaluation (WPTE~2025) was held on July 20, 2025, in Birmingham, UK, as part of FSCD~2025.
+WPTE brings together researchers working on program transformations, evaluation, and operationally based programming language semantics, using rewriting methods.
+This volume collects the extended abstracts of the contributions accepted for presentation.
+We thank all authors for their submissions and the program committee and reviewers for their feedback.
+We hope the contributions will foster further research and collaboration in the rewriting community.
+
+\vfill
+\vfill
+
+\section*{Invited Talks}
+
+\begin{itemize}
+\item
+  \textbf{Transformations of Macro Tree Programs}\\
+  \protect\hspace{1.5em}
+  by {\itshape Sebastian Maneth}
+\item
+  \textbf{Generating feedback from rewrite strategies for interactive exercises}\\
+  \protect\hspace{1.5em}
+  by {\itshape Alex Gerdes}
+\end{itemize}
+
+\vfill
+
+\section*{Program Committee}
+
+\begin{itemize}
+\item Martin Avanzini, Inria Sophia Antipolis
+\item Patrick Bahr, IT University of Copenhagen
+\item Demis Ballis, University of Udine
+\item Mirai Ikebuchi, Kyoto University
+\item Cynthia Kop (co-chair), Radboud University Nijmegen
+\item Ivan Lanese, University of Bologna
+\item Pierre Lermusiaux, Inria Rennes
+\item Steven Libby, University of Portland
+\item Luca Roversi, University of Turin
+\item Janis Voigtl\"ander (chair), University of Duisburg-Essen
+\item Johannes Waldmann, Leipzig University of Applied Sciences
+\item Sarah Winkler, Free University of Bozen-Bolzano
+\end{itemize}
+
+\vfill
+\end{titlepage}
+
+
+\cleardoublepage
+
+% Table of Contents in roman numerals
+\pagenumbering{roman}
+\tableofcontents
+
+\cleardoublepage
+
+% Main content in arabic page numbers
+\pagenumbering{arabic}
+
+% Loop over papers
+\foreach \Title/\Author in \PaperList {%
+  \startPaper
+  \phantomsection
+  \addcontentsline{toc}{section}{\Title}%
+  \addtocontents{toc}{\protect\hspace{1.5em}{\small\itshape\Author}\protect\par}%
+  \includepdf[
+    pages=-,
+    pagecommand={\thispagestyle{plain}}
+  ]{\Title.pdf}%
+}
+
+\end{document}
